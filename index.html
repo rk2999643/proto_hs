@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Question.1 Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</h3>
+    <pre>const parent = {
+        lname : "prep",
+        fname : "Wa21",
+        fullname : functon abc() {
+            console.log(this.lname+" "+this.fname);
+        }
+    
+    }
+    const child ={
+        __prop__:parent
+    }
+    child.fullname();</pre>
+    <h3>Question.2 Write code to explain prototype chaining</h3>
+    <pre>
+        const obj1={
+            name: "prep"
+        }
+        const obj2={
+            __proto__:obj1,
+             num: "6846"
+        }
+        const obj3={
+            __proto__:obj2,
+            lname: "iho"
+        }
+    </pre>
+    <h3>Question.3 Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays</h3>
+    <pre>
+        let result;
+const add = {
+    sum : function(arr){
+        
+        for(let i=0; arr.length>i ; i++){
+            result+= arr[i];
+        }
+        console.log(result)
+    }
+}
+add.sum([1,2,3,4,5])
+    </pre>
+    <h3>Question.4 Write a JavaScript function to retrieve all the names of object's own and inherited properties.</h3>
+    <pre>
+        let a = [1,2,3,4]
+        let b = a.reduce((x,y)=>{
+            x  += y
+            return x
+        },0)
+        console.log(b);    </pre>
+     <script src="./pro.js"></script>
+
+</body>
+</html>
